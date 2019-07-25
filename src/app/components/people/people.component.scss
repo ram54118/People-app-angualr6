@@ -1,0 +1,56 @@
+.people-search-container {
+  min-width: 225px;
+  border-right: 1px solid #c4c4c4;
+
+  .people-list {
+    margin-right: 20px;
+
+    .people {
+      padding: 8px 5px;
+      border-bottom: 1px solid #c4c4c4;
+      cursor: pointer;
+    }
+
+    .people:hover {
+      background: #f3f3f3;
+    }
+  }
+}
+
+.people-content {
+  flex: 1;
+  margin-top: 50px;
+  display: flex;
+  font-size: 1rem;
+  margin-left: 100px;
+
+  .control {
+    display: flex;
+
+    .control-label {
+      margin-right: 10px;
+      min-width: 100px;
+      color: #828181;
+    }
+
+    .control-value {
+      color: #3e3d3d;
+    }
+
+    .home-planet {
+      margin-top: 20px;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  .people-search-container {
+    min-width: 100%;
+    border: none;
+  }
+
+  .people-content {
+    margin-left: 0;
+  }
+}

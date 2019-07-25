@@ -1,0 +1,9 @@
+  <div class="row header">
+    <div class="back-btn" *ngIf="showBackBtn">
+      <span (click)="goBack()"><i class="fas fa-angle-left"></i> Back</span>
+    </div>
+    <div class="title">PEOPLE</div>
+    <div class="enable-offline-btn" *ngIf="showOfflineBtn">
+      <button type="button" class="btn btn-light" (click)="enableOffline()">Enable Offline</button>
+    </div>
+  </div>

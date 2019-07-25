@@ -1,0 +1,43 @@
+<app-header [showBackBtn]="true" [showOfflineBtn]="false" title="title"></app-header>
+<app-content>
+
+  <div class="people-content">
+    <ng-container *ngIf="(planet$ | async) as selectedPlanet">
+      <div class="control">
+        <div class="control-label">Name:</div>
+        <div class="control-value">{{selectedPlanet.name}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Rototion Period:</div>
+        <div class="control-value">{{selectedPlanet.rotation_period}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Obital Period:</div>
+        <div class="control-value">{{selectedPlanet.orbital_period}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Diameter:</div>
+        <div class="control-value">{{selectedPlanet.diameter}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Grovity:</div>
+        <div class="control-value">{{selectedPlanet.gravity}}</div>
+      </div>
+
+      <div class="control">
+        <div class="control-label">Terrain:</div>
+        <div class="control-value">{{selectedPlanet.terrain}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Surface Water:</div>
+        <div class="control-value">{{selectedPlanet.surface_water}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Population:</div>
+        <div class="control-value">{{selectedPlanet.population}}</div>
+      </div>
+
+    </ng-container>
+  </div>
+
+</app-content>

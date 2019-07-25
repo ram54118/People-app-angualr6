@@ -1,0 +1,27 @@
+.header {
+  background: #43a6e0;
+  padding: 1rem;
+  color: #ffffff;
+
+  .back-btn {
+    margin-top: 8px;
+    cursor: pointer;
+  }
+
+  .enable-offline-btn {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      color: #fff;
+      background-color: #1586c7;
+      border-color: #086aa2;
+    }
+  }
+
+  .title {
+    text-align: center;
+    flex: 1;
+    font-size: 1.5rem;
+  }
+}

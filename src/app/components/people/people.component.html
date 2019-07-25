@@ -1,0 +1,38 @@
+<app-header [showBackBtn]="false" [showOfflineBtn]="true" title="title" (enableOfflineView)="enableOfflineView($event)">
+</app-header>
+<app-content>
+  <div class="people-search-container">
+    <app-search (triggerSearch)="filterPeople($event)"></app-search>
+    <div class="people-list" *ngIf="(peopleList$ | async) as peopleList">
+      <div class="people" *ngFor="let people of peopleList" (click)="selectPeople(people)">{{people.name}}</div>
+    </div>
+  </div>
+  <div class="people-content">
+    <div *ngIf="selectedPlanet">
+      <div class="control">
+        <div class="control-label">Name:</div>
+        <div class="control-value">{{selectedPlanet.name}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Year of Birth:</div>
+        <div class="control-value">{{selectedPlanet.birth_year}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Gender:</div>
+        <div class="control-value">{{selectedPlanet.gender}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Height:</div>
+        <div class="control-value">{{selectedPlanet.height}}</div>
+      </div>
+      <div class="control">
+        <div class="control-label">Mass:</div>
+        <div class="control-value">{{selectedPlanet.mass}}</div>
+      </div>
+      <div class="control">
+        <button type="button" class="btn btn-secondary home-planet" (click)="redirectToPlanet()">Home planet</button>
+      </div>
+    </div>
+  </div>
+
+</app-content>
